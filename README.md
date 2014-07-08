@@ -19,7 +19,13 @@ class Foo
     end
   end
 end
+
+assert_equal 6,     Foo.new.foo(2, 3)
+assert_equal false, Foo.new.foo(2, "3")
 ```
+
+When the `Contract` module is included, the methods `contract` and
+`verify` become available.
 
 ``` ruby
 class Bar
@@ -34,10 +40,10 @@ class Bar
     end
   end
 end
-```
 
-When the `Contract` module is included, the methods `contract` and
-`verify` become available.
+assert_equal 6,     Bar.new.bar(2, 3)
+assert_equal false, Bar.new.bar(2, "3")
+```
 
 ## Installation
 
