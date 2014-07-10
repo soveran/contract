@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = "contract"
-  s.version           = "0.0.1"
+  s.version           = "0.1.0"
   s.summary           = "Contract helper"
   s.description       = "Contract helper"
   s.authors           = ["Michel Martens"]
