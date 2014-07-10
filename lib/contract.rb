@@ -6,24 +6,17 @@ module Contract
 
   # Returns the value of the block
   # if all verifications pass
-  def self.define(&block)
+  def contract
     catch(:contract) do
       yield
     end
   end
 
   # Fails unless value is true
-  def self.verify(value)
+  def verify(value)
     value || throw(:contract, false)
   end
 
-  # Shorthand for Contract.define
-  def contract(&block)
-    Contract.define(&block)
-  end
-
-  # Shorthand for Contract.verify
-  def verify(value)
-    Contract.verify(value)
-  end
+  module_function :contract
+  module_function :verify
 end

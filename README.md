@@ -11,7 +11,7 @@ The functions of a contract can be used directly from the
 ``` ruby
 class Foo
   def foo(a, b)
-    Contract.define do
+    Contract.contract do
       Contract.verify(Numeric === a)
       Contract.verify(Numeric === b)
 

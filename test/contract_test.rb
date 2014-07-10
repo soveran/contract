@@ -2,7 +2,7 @@ require_relative "../lib/contract"
 
 class Foo
   def foo(a, b)
-    Contract.define do
+    Contract.contract do
       Contract.verify(Numeric === a)
       Contract.verify(Numeric === b)
 
